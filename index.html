@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/scripts.js" type="module" defer></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+    <title>Document</title>
+</head>
+
+<body class="body" style="background-color:#ccc">
+    <div class="container">
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <img src="./images/logo.png" alt="logo">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#">Nosotros</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#">Anuncios</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#"">Blog</a></li>
+                        <li class=" nav-item active"><a class="nav-link" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <img src="./images/header.jpg" alt="header">
+            <p id="ad">Administracion</p>
+
+        </header>
+
+        <main>
+            <fieldset>
+                <legend>Informacion del anuncio</legend>
+                <form action="#">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="hidden" name="id">
+                            <label>Titulo:</label>
+                            <input type="text" name="titulo" placeholder="Titulo" required /> <br />
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Descripcion:</label>
+                            <input type="text" name="descripcion" placeholder="Descripcion" required /> <br />
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-check">
+                            <fieldset>
+                                <legend>Tipo</legend>
+                                <input type="radio" name="tipo" value="perro" checked /> Perro <br />
+                                <input type="radio" name="tipo" value="gato" /> Gato <br />
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Precio:</label>
+                            <input type="number" name="precio" placeholder="Precio"><br />
+                        </div>
+                    </div>
+
+                    <div id="rfv">
+                        <label>Raza:</label>
+                        <input type="text" name="raza" placeholder="Raza"><br />
+                        <br />
+                        <label>Fecha de Nacimiento:</label>
+                        <input type="datetime" name="fecha" placeholder="Fecha de Nacimiento"><br />
+                        <br />
+                        <div class="field">
+                            <label>vacuna</label>
+                            <select id="vacuna">
+                                <option value="si">si</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+
+                        <br />
+                    </div>
+                    <input type="submit" id="btnSubmit" value="Alta anuncio" id="icono">
+                    <input type="button" id="btnEliminar" class="oculto" value="Eliminar">
+                    <input type="button" id="btnCancelar" class="oculto" value="Cancelar">
+
+                </form>
+                <div id="spinner-container"></div>
+                <div id="divLista" class="table table-bordered table-striped table-hover table-sm "></div>
+
+            </fieldset>
+
+            <div class="filters">
+                <fieldset>
+                    <legend> </legend>
+
+                </fieldset>
+                <hr>
+
+                <div class="col-sm-6">
+                    <div class="field">
+                        <label>Promedio de precios:</label>
+                        <input type="number" name="prom" placeholder="Promedio"><br />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <label>Filtrar por</label>
+                        <select id="filtrar">
+                            <option value="">Todos</option>
+                            <option value="si">Perro</option>
+                            <option value="no">Gato</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <input type="radio" name="tipo" value="titulo"  /> titulo <br />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <input type="radio" name="tipo" value="transaccion"  /> transaccion <br />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <input type="radio" name="tipo" value="descripcion"  /> descripcion <br />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <input type="radio" name="tipo" value="precio"  /> precio <br />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <input type="radio" name="tipo" value="animal"  /> animal <br />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <input type="radio" name="tipo" value="raza"  /> raza <br />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <input type="radio" name="tipo" value="fecha"  /> fecha de nacimiento <br />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="field">
+                        <input type="radio" name="tipo" value="vacuna"  /> vacuna <br />
+                    </div>
+                </div>
+                <div id="divListaFilt" class="table table-bordered table-striped table-hover table-sm "></div>
+            </div>
+
+
+        </main>
+
+        <footer class="footer">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#">Nosotros</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#">Anuncios</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#"">Blog</a></li>
+                        <li class=" nav-item active"><a class="nav-link" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+            <p>Todos los derechos reservados <date>2021</date> &copy; </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
