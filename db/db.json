@@ -1,0 +1,37 @@
+{
+  "mascotas": [
+    {
+      "id": 1624992666471,
+      "titulo": "Sasha",
+      "transaccion": "Venta",
+      "descripcion": "Hermosa",
+      "precio": "12",
+      "tipo": "perro",
+      "raza": "Caniche",
+      "fecha": "03/01/2010",
+      "vacuna": "no"
+    },
+    {
+      "id": 1624993452424,
+      "titulo": "Pochi",
+      "transaccion": "Venta",
+      "descripcion": "Perro Callejero",
+      "precio": "1230",
+      "tipo": "perro",
+      "raza": "Callejero",
+      "fecha": "03/09/1996",
+      "vacuna": "no"
+    },
+    {
+      "id": 1625004840755,
+      "titulo": "Bart",
+      "transaccion": "Venta",
+      "descripcion": "Hermoso",
+      "precio": "12.00",
+      "tipo": "perro",
+      "raza": "Ovejero Aleman",
+      "fecha": "03/09/1996",
+      "vacuna": "si"
+    }
+  ]
+}

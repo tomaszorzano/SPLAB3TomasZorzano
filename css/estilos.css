@@ -1,0 +1,115 @@
+.container {
+    max-width: 600px;
+    display: flex;
+    margin: 0 auto;
+    background-color: white;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+  
+  form{
+      margin-bottom: 2rem;
+  }
+  .oculto
+{
+  display: none;
+}
+
+h1, fieldset
+{
+  font-size:medium;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#navHeader
+{
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    margin-right: 40px;
+    margin-top: 40px;
+    background-color: orangered;
+}
+
+ul {
+  list-style-type: none;
+  display:flex;
+  justify-content: space-between;
+}
+
+ul li a{
+  text-decoration:none;
+  color: white;
+  margin: 5px 10px;
+
+}
+
+footer{
+  background-color:orangered;
+  color: white;
+  display: flex;
+  justify-content:space-around;
+  flex-direction: row;
+}
+#ad{
+  padding: 15px;
+  text-align: center;
+  border: 1px solid lightgrey;
+  margin: 0;
+  font-size: xx-large;
+}
+
+input{
+  background-color: wheat;    
+  border-radius: 5px;
+}
+header{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  top: 0;
+}
+ul{
+  list-style-type: none;
+  display: flex;
+}
+ul li a{
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  background-color: grey;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px 10px;
+}
+footer{
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 5px;
+}
+footer p{
+  color:black;
+}
